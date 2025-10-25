@@ -1,0 +1,79 @@
+/* header {
+    background-color: #fff;
+} */
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.p-menubar {
+  border: none !important;
+  border-radius: 0 !important;
+  background-color: #ffffff !important;
+  padding: 0.6rem 2rem !important;
+  height: 64px; /* <-- fixe la hauteur ici */
+  display: flex;
+  align-items: center;
+}
+
+/* Ne laisse pas le logo influencer la hauteur */
+.header-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header-logo img {
+  height: 110px;
+  width: auto;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lang-dropdown .p-dropdown {
+  min-width: 100px;
+}
+
+.p-menubar-root-list > .p-menuitem > .p-menuitem-content:hover {
+  background-color: #f3f4f6 !important;
+  border-radius: 6px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #c4c4c4;
+}
+
+.avatar img {
+    width: 90%;
+    height: 90%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.breadCrumbItem {
+    transition: ease-in-out 250ms;
+}
+
+.breadCrumbItem:hover,
+.breadCrumbItem.active {
+    background-color: var(--surface-100);
+    color: #096eea !important;
+    font-weight: 400;
+    /* background-color: #dfdfdf; */
+    /* color: #6366F1 !important; */
+}

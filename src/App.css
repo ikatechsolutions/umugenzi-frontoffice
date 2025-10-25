@@ -1,0 +1,212 @@
+#root {
+  /* max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center; */
+  --primary-color: #6a6cf7;
+}
+
+body {
+  /* background: #0f2027; */
+  /* background: linear-gradient(-45deg, #95acd7, #2a5298, #1e3c72, #4586ab);
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: #ecf0f5 !important;
+  overflow-y: auto;
+}
+
+.main_content {
+    min-height: calc(100vh - 60px);
+    height: calc(100vh - 60px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.main_content.has_footer {
+    min-height: calc(100vh - 120px);
+    height: calc(100vh - 120px);
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #f8f9fa; */
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 37px;
+  right: 12px;
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.btn-primary {
+  background-color: #007bff !important; /* Couleur primaire (bleu Bootstrap) */
+  border: none !important;
+  color: white !important;
+  border-radius: 12px;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9 !important; /* Variante plus foncée au survol */
+}
+
+.btn-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.modal-loading-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-loading-content {
+    height: 50px;
+}
+
+.p-menubar .p-menuitem-link {
+    text-decoration: none !important;
+}
+
+.button-rounded {
+  border-radius: 12px;
+}
+
+/* FAQ personnalisée */
+.p-accordion .p-accordion-header-link {
+  background: #fff;
+  color: #333;
+  font-weight: 600;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.p-accordion .p-accordion-header-link:hover {
+  background: #f0f0f0;
+}
+
+.p-accordion .p-accordion-content {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+}
+
+.p-accordion-header a {
+  text-decoration: none !important;
+}
+
+
+/* Pour Dashboard */
+
+/* Dashboard styles (PrimeReact) */
+.dashboard-container {
+  padding: 18px;
+}
+
+/* header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* stats grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+/* for small screens */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .grid-two-columns {
+    display: block;
+  }
+}
+
+/* stat card */
+.stat-card {
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.stat-card-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-left .stat-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1f2937; /* gray-800 */
+}
+
+.stat-left .stat-sub {
+  font-size: 0.9rem;
+  color: #6b7280; /* gray-500 */
+}
+
+.stat-icon {
+  background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(99,102,241,0.04));
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon-inner {
+  font-size: 1.25rem;
+  color: #6366f1;
+}
+
+/* main two columns layout */
+.grid-two-columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .grid-two-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* recent events card tweaks */
+.card-recent .p-datatable .p-datatable-tbody > tr > td {
+  padding: 0.5rem 0.75rem;
+}
+
+
