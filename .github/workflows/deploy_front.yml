@@ -30,4 +30,6 @@ jobs:
 
       - name: Deploy build to VPS
         run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
           rsync -avz --delete ./build/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/frontoffice
