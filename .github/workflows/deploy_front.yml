@@ -21,7 +21,10 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm ci
-          npm run build
+          npm run build || npm run vite build
+
+      - name: List files after build
+        run: ls -la
 
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.8.0
@@ -32,4 +35,4 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-          rsync -avz --delete ./build/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/frontoffice
+          rsync -avz --delete ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/frontoffice
